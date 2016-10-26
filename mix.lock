@@ -1,0 +1,2 @@
+%{"gen_stage": {:hex, :gen_stage, "0.7.0", "d8ab7f294ca0fb7ca001c33a97d25876561f086ecd149689f43c0d2ffccf4fff", [:mix], []},
+  "porcelain": {:hex, :porcelain, "2.0.2", "c1d4863de3e391195e36457bb3d7e17ee1bca5a44f1d708bc037c313342f58e9", [:mix], []}}
