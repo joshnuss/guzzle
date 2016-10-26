@@ -1,5 +1,5 @@
 defmodule ConcatTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Guzzle.Concat
 
   import Guzzle.Concat

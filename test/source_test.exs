@@ -1,5 +1,5 @@
 defmodule SourceTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Guzzle.Source
 
   import Guzzle.Source
