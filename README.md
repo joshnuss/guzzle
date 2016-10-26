@@ -1,6 +1,8 @@
 # Guzzle
 
-**TODO: Add description**
+A multi-core streaming build tool using Elixir's [GenStage](https://github.com/elixir-lang/gen_stage).
+
+Inspired by Gulp.
 
 ## Example
 
