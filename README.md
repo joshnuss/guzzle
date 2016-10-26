@@ -21,6 +21,18 @@ task :watch do
 end
 ```
 
+Then run:
+
+```shell
+guzzle watch
+```
+
+or
+
+```shell
+guzzle jade
+```
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
