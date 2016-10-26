@@ -11,9 +11,9 @@ defmodule Guzzle.Source do
     List.wrap(globs)
     |> Flow.from_enumerable
     |> Flow.flat_map(&Path.wildcard/1)
-    |> Flow.map(&path_to_record/1)
+    |> Flow.map(&to_record/1)
   end
 
-  defp path_to_record(path),
+  defp to_record(path),
     do: {path, File.read!(path)}
 end
