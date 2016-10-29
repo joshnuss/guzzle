@@ -3,8 +3,9 @@ defmodule Guzzle.Source do
 
   def source(globs) do
     List.wrap(globs)
-    |> Flow.from_enumerable
+    |> Flow.from_enumerable(min_demand: 1)
     |> Flow.flat_map(&Path.wildcard/1)
+    |> Flow.partition
     |> Flow.map(&to_record/1)
   end
 
