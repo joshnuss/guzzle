@@ -3,7 +3,6 @@ defmodule Guzzle.Map do
 
   def map(flow, fun) do
     flow
-    |> Flow.from_enumerable
     |> Flow.map(fun)
   end
 end

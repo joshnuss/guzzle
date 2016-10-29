@@ -3,7 +3,6 @@ defmodule Guzzle.Rename do
 
   def rename(flow, options) do
     flow
-    |> Flow.from_enumerable
     |> Flow.map(&do_rename(&1, options))
   end
 
