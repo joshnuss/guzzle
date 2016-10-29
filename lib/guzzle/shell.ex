@@ -7,18 +7,22 @@ defmodule Guzzle.Shell do
     |> execute(data)
   end
 
-  defp execute(command, _data = nil) do
-    {:ok, [stdout: out]} = :exec.run(command, [:stdin, :stdout, :sync])
-
-    Enum.join( out )
-  end
-
   defp execute(command, data) do
     {:ok, _pid, cmd} = :exec.run(command, [:stdin, :stdout])
 
-    :exec.send(cmd, data)
-    :exec.send(cmd, :eof)
+    cmd
+    |> write(data)
+    |> write(:eof)
+    |> read
+  end
 
+  def write(cmd, _data=nil), do: cmd
+  def write(cmd, data) do
+    :exec.send(cmd, data)
+    cmd
+  end
+
+  def read(cmd) do
     receive do
       {:stdout, ^cmd, out} -> out
     end
