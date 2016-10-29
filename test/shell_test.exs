@@ -11,4 +11,8 @@ defmodule ShellTest do
   test "executes program without arguments" do
     assert shell("echo", []) == "\n"
   end
+
+  test "passes data to stdin" do
+    assert shell("cat", [], "hello\nworld\n") == "hello\nworld\n"
+  end
 end
