@@ -12,7 +12,7 @@ defmodule Guzzle.Rename do
   defp do_rename({path, data}, options) do
     ext  = Keyword.fetch!(options, :ext)
     root = Path.rootname(path)
-    path = Enum.join([root, ext])
+    path = Enum.join([root, ".", ext])
 
     {path, data}
   end

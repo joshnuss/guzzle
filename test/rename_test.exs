@@ -8,7 +8,7 @@ defmodule RenameTest do
   test "rename extensions" do
     files = [{"foo/a.js", "x=2"}, {"foo/b.javascript", "y=3"}]
     |> Flow.from_enumerable
-    |> rename(ext: ".es6")
+    |> rename(ext: "es6")
     |> Enum.to_list
 
     assert files == [{"foo/a.es6", "x=2"}, {"foo/b.es6", "y=3"}]
