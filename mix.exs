@@ -15,7 +15,8 @@ defmodule Guzzle.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :gen_stage]]
+    [mod: {Guzzle.Application, []},
+     applications: [:logger, :gen_stage]]
   end
 
   # Dependencies can be Hex packages:
