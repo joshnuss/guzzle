@@ -30,6 +30,7 @@ defmodule Guzzle.Mixfile do
   defp deps do
     [
       {:gen_stage, "~> 0.4"},
+      {:erlexec, "~> 1.4.0"}
     ]
   end
 end
