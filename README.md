@@ -8,6 +8,8 @@ Inspired by Gulp.
 
 ```elixir
 # In Guzzlefile.exs
+import Guzzle.Jade
+import Guzzle.Minify
 
 task :jade do
   src("ux/**/*.jade")
